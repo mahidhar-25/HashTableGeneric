@@ -1,5 +1,8 @@
 package com.bridgelabz.hashtable;
 
+/*
+@desc : this class is a main application running program for hashtable
+ */
 public class Main {
 
     /*
@@ -32,7 +35,15 @@ public class Main {
                 "deliberately into paranoid avoidable " +
                 "situations ";
 
+        //usecase 1 ,2
         findFrequencyOfWords(paragraph , newHashTable);
+        System.out.println(newHashTable);
+        System.out.println();
+        System.out.println();
+
+        //usecase 3 it has been deleted
+        newHashTable.remove("avoidable");
+
         System.out.println(newHashTable);
     }
 }

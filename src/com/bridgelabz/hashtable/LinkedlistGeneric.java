@@ -227,22 +227,23 @@ public class LinkedlistGeneric<S extends Comparable<S> , T extends Comparable<T>
      @return : returns the deleted value.
 
      */
-    public T popByKey( T key){
+    public T popByKey( S key){
         T data = null;
         MyMapNode<S , T> currMyMapNode = head, prev = null;
 
-        if (currMyMapNode != null && currMyMapNode.value == key) {
+        if (currMyMapNode != null && key.equals(currMyMapNode.key)) {
             data = (T)head.value;
             head = currMyMapNode.next;
         }
-        while (currMyMapNode != null && currMyMapNode.value != key) {
+        while (currMyMapNode != null && !key.equals(currMyMapNode.key)) {
             prev = currMyMapNode;
             currMyMapNode = currMyMapNode.next;
         }
 
         if (currMyMapNode != null) {
             data = (T)currMyMapNode.value;
-            prev.next = currMyMapNode.next;
+           if( prev != null)
+               prev.next = currMyMapNode.next;
         }
 
         if (currMyMapNode == null) {
