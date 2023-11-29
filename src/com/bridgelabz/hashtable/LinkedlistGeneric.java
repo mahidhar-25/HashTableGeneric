@@ -298,7 +298,7 @@ public class LinkedlistGeneric<S extends Comparable<S> , T extends Comparable<T>
 */
     public void updateNode(S key , T value){
         MyMapNode<S , T> currMyMapNode = head;
-        while ( currMyMapNode != null && key.equals(currMyMapNode.key)) {
+        while ( currMyMapNode != null && !key.equals(currMyMapNode.key)) {
             currMyMapNode = currMyMapNode.next;
         }
         if(currMyMapNode != null){

@@ -22,10 +22,15 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("!!! welcome to hash table program !!! ");
         HashTable<String , Integer> newHashTable = new HashTable<>();
-        String paragraph = "In a quaint quaint village the sun rose in a quaint sky casting quaint shadows on quaint houses The" +
-                " villagers quaint in their daily routine greeted each other with quaint smiles Quaint flowers adorned quaint " +
-                "gardens and the air echoed with quaint laughter Quaint simplicity defined every quaint aspect of their quaint " +
-                "existence";
+        String paragraph = "Paranoids are not paranoid " +
+                "because they are paranoid but " +
+                "because they keep putting themselves " +
+                "deliberately into paranoid avoidable " +
+                "situations " + "Paranoids are not paranoid " +
+                "because they are paranoid but " +
+                "because they keep putting themselves " +
+                "deliberately into paranoid avoidable " +
+                "situations ";
 
         findFrequencyOfWords(paragraph , newHashTable);
         System.out.println(newHashTable);
